@@ -123,6 +123,7 @@ app.get("/random/:count", (req, res) => {
     res.send(selected);
 })
 
-const listener = app.listen(3000, function() {
+const port = process.env.PORT || 3000;
+const listener = app.listen(port, function() {
   console.log("Your app is listening on port " + listener.address().port);
 });
